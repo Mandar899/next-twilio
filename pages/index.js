@@ -81,7 +81,7 @@ export default function Home() {
             ></textarea>
           </div>
           <button
-            className='w-full px-4 py-5 bg-yellow-400 text-gray-900 font-bold uppercase tracking-widest rounded focus:outline-none hover:bg-yellow-300 '
+            className='w-full px-4 py-5 bg-yellow-400 text-gray-900 font-bold uppercase tracking-widest rounded focus:outline-none hover:bg-yellow-300 disabled:cursor-wait'
             disabled={loading}
             type='submit'
           >
@@ -89,9 +89,15 @@ export default function Home() {
           </button>
         </div>
 
-        {success && <p className=''>Message sent successfully.</p>}
+        {success && (
+          <p className='text-green-500 font-semibold'>
+            Message sent successfully😉.
+          </p>
+        )}
         {error && (
-          <p className=''>Something went wrong. Please check the number.</p>
+          <p className='text-red-500 font-semibold'>
+            Something went wrong. Please check the number😅.
+          </p>
         )}
       </form>
     </div>
