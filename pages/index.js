@@ -14,7 +14,7 @@ export default function Home() {
     setError(false);
     setSuccess(false);
 
-    const res = await fetch('/api/sendMesage', {
+    const res = await fetch('/api/sendMessage', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -90,12 +90,12 @@ export default function Home() {
         </div>
 
         {success && (
-          <p className='text-green-500 font-semibold'>
+          <p className='text-green-500 font-semibold mt-4 '>
             Message sent successfully😉.
           </p>
         )}
         {error && (
-          <p className='text-red-500 font-semibold'>
+          <p className='text-red-500 font-semibold mt-4'>
             Something went wrong. Please check the number😅.
           </p>
         )}
